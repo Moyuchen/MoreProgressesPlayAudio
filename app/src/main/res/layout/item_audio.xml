@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/receive_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/nanhead" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/play"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="invisible"
+                    android:src="@mipmap/icon_audio_play" />
+
+                <ImageView
+                    android:id="@+id/pause"
+                    android:layout_width="20dp"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="invisible"
+                    android:src="@mipmap/icon_audio_pause" />
+
+            </RelativeLayout>
+
+            <com.google.android.exoplayer2.ui.DefaultTimeBar
+                android:id="@id/exo_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:ad_marker_width="3dp"
+                app:bar_height="1dp"
+                android:visibility="visible"
+                app:buffered_color="#33ee2d1b"
+                app:hide_during_ads="false"
+                app:hide_on_touch="false"
+                app:played_color="#ee2d1b"
+                app:scrubber_color="#ee2d1b"
+                app:scrubber_dragged_size="7dp"
+                app:scrubber_drawable="@mipmap/icon_progress_mark"
+                app:scrubber_enabled_size="7dp"
+                app:touch_target_height="3dp"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00:00"
+                    android:textColor="#999999"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="00:00"
+                    android:textColor="#999999"
+                    android:textSize="11sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/item_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nihaonnnnnnnnnnnnnnnnnnnnnnnnn"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/send_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/tv_send_layout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_all"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_send_layout_head"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/nanhead" />
+    </LinearLayout>
+</LinearLayout>
